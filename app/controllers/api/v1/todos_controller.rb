@@ -4,10 +4,19 @@ class Api::V1::TodosController < Api::V1::ApiController
   before_action :check_required_params, only: [:create]
   before_action :set_todo, only: [:show, :update, :destroy]
   
+  #######################################################
+  ## Lists all todos by user
   def index
     @todos = @user.todos
   end
 
+  #######################################################
+  ## Update a todo
+  def show    
+  end
+
+  #######################################################
+  ## Create a new todo for logged in user
   def create
     @todo = @user.todos.new(todo_params)
     @todo.save!
@@ -15,10 +24,14 @@ class Api::V1::TodosController < Api::V1::ApiController
     return render json: { success: true, msg: 'Todo was created successfully.' }, status: 201
   end
 
+  #######################################################
+  ## Update a todo
   def update
     @todo.update(todo_params)
   end
 
+  #######################################################
+  ## Delete a todo
   def destroy
     @todo.destroy
 
