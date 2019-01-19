@@ -9,20 +9,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Start Bootstrap</a>
+            <a class="navbar-brand" href="#">C|C</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
                     <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#services">Services</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
+                </li>                
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -34,8 +28,8 @@
 <header class="header-image">
     <div class="headline">
         <div class="container">
-            <h1>One Page Wonder</h1>
-            <h2>Will Knock Your Socks Off</h2>
+            <h1>Cooperative Computing</h1>
+            <h2>RoR Assessment Assignment - Todo List</h2>
         </div>
     </div>
 </header>
@@ -43,38 +37,42 @@
 <!-- Page Content -->
 <div class="container">
 
-    <hr class="featurette-divider">
+    <br /><br /><br /><br />
 
     <!-- First Featurette -->
     <div class="featurette" id="about">
-        <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
-        <h2 class="featurette-heading">This First Heading
-            <span class="text-muted">Will Catch Your Eye</span>
+        <%= image_tag 'documentation.png', class: 'featurette-image img-circle img-responsive pull-right' %>
+        
+        <h2 class="featurette-heading">API
+            <span class="text-muted">Documentation</span>
         </h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <p class="lead">This application allows you to perform 5 basic operations on Todo List. 
+            Its documentation with complete request/response can be found 
+            <a href="https://documenter.getpostman.com/view/262458/RzteSXf9">here</a>.</p>
     </div>
 
     <hr class="featurette-divider">
 
     <!-- Second Featurette -->
     <div class="featurette" id="services">
-        <img class="featurette-image img-circle img-responsive pull-left" src="http://placehold.it/500x500">
-        <h2 class="featurette-heading">The Second Heading
-            <span class="text-muted">Is Pretty Cool Too.</span>
+        <%= image_tag 'setup.png', class: 'featurette-image img-circle img-responsive pull-left' %>
+        
+        <h2 class="featurette-heading">Project
+            <span class="text-muted">Setup</span>
         </h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <p class="lead">
+            This projcet requires:
+                <ul>                
+                    <li><code>Rails 5.2</code></li>
+                    <li><code>Ruby 2.4.1</code></li>
+                    <li><code>Postgresql</code></li>
+                    <li><code>Clone code from <a href="https://github.com/mohsinali/todolist">here</a></code></li>
+                    <li>Run <code>bundle install</code></li>
+                    <li>Run <code>rake db:seed</code></li>
+                </ul>
+        </p>
     </div>
 
-    <hr class="featurette-divider">
-
-    <!-- Third Featurette -->
-    <div class="featurette" id="contact">
-        <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
-        <h2 class="featurette-heading">The Third Heading
-            <span class="text-muted">Will Seal the Deal.</span>
-        </h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-    </div>
 
     <hr class="featurette-divider">
 
