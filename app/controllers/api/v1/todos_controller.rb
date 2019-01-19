@@ -1,4 +1,6 @@
 class Api::V1::TodosController < Api::V1::ApiController
+  before_action :authenticate_via_token
+
   before_action :check_required_params
   before_action :set_todo, only: [:show, :update, :destroy]
 
@@ -6,7 +8,10 @@ class Api::V1::TodosController < Api::V1::ApiController
   end
 
   def create
-    
+    @todo = @user.todos.new(todo_params)
+    @todo.save!
+
+    return render json: { success: true, msg: 'Todo was created successfully.' }, status: :ok
   end
 
   private
