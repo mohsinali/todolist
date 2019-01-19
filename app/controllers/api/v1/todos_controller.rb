@@ -1,10 +1,11 @@
 class Api::V1::TodosController < Api::V1::ApiController
   before_action :authenticate_via_token
 
-  before_action :check_required_params
+  before_action :check_required_params, only: [:create]
   before_action :set_todo, only: [:show, :update, :destroy]
 
   def index
+    @todos = @user.todos
   end
 
   def create
