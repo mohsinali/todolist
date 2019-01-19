@@ -1,0 +1,5 @@
+development:
+  HMAC_SECRET: "****"
+
+production:
+  HMAC_SECRET: "****"
